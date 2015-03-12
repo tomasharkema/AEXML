@@ -47,6 +47,10 @@ public class AEXMLElement {
     public var doubleValue: Double {
         return (stringValue as NSString).doubleValue
     }
+    public var dateValue: NSDate {
+        let dateFormatter = NSDateFormatter()
+        return dateFormatter.dateFromString(stringValue) ?? NSDate()
+    }
     
     // MARK: Lifecycle
     
